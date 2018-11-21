@@ -8,11 +8,11 @@ library(randomForest)
 library(caret)
 library(ggplot2)
 
-setwd("~/Desktop/PROTECT/WORK/ALGOlevel") ##Insert path here
-data<-read.csv("Brand1Brand2CreativeData.csv",header=TRUE)
-EngageData<-na.omit(data)
-EngageData<-droplevels(EngageData)
-data<-NULL
+setwd({"Your Working Directory (with data in it)"}) ##Insert path here
+data<-read.csv({"Your CSV File.csv"},header=TRUE) ##Read in your CSV file
+EngageData<-na.omit(data) ##Create working data set, ommitting all NAs
+EngageData<-droplevels(EngageData) ##Drop unused levels from the data
+data<-NULL ## wipe the original read in
 
 attach(EngageData)
 head(EngageData)
